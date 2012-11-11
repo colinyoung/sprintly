@@ -1,6 +1,6 @@
 # Sprintly
 
-TODO: Write a gem description
+A client for the Sprintly API
 
 ## Installation
 
@@ -18,7 +18,22 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+1. Configure with your API KEY:
+
+  ```ruby
+  Sprintly.api_key = 'sample api key'
+  ```
+  
+2. Access resources:
+
+  ```ruby
+  items = Sprintly::Product['99999'].items
+  
+  # You can pass a hash of parameters to resource methods like 'items'.
+  # Incidentally, it's dynamic, so if Sprintly adds resources to their API, this will still work.
+  ```
+  
+3. 
 
 ## Contributing
 
