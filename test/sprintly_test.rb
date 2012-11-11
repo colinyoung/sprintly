@@ -14,7 +14,8 @@ describe Sprintly do
   
   it 'allows you to get the items' do
     product = Sprintly::Product['0']
-    product.items :type => 'story'
+    items = product.items :type => 'story'
+    assert items.is_a?(Array), 'items must be an array'
   end
   
 end

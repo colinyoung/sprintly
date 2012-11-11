@@ -12,8 +12,8 @@ module Sprintly
     
     def append_path!(element, hash={})
       @url << "/#{element.to_s.pluralize}"
-      id = hash.first {|item| item =~ /\_id$/ }
-      @url << "/#{id.last}" unless id.empty?
+      ids = hash.select {|item| item =~ /\_id$/ }
+      @url << "/#{ids.values[0]}" unless ids.empty?
     end
     
     def to_url
@@ -24,8 +24,13 @@ module Sprintly
       to_url
     end
     
+    def to_a
+      # @Todo: return the items from the Sprintly response.
+      @response || []
+    end
+    
     def method_missing(name, hash={})
-      Resource.new(name, hash)
+      Resource.new(name, hash).to_a
     end
     
     def ==(other)
