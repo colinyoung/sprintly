@@ -9,6 +9,7 @@ Gem::Specification.new do |gem|
   gem.homepage      = "https://github.com/colinyoung/sprintly"
   
   gem.add_development_dependency 'minitest'
+  gem.add_dependency 'rake'
   gem.add_dependency 'activesupport'
   gem.add_dependency 'rest-client'
 
