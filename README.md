@@ -2,6 +2,8 @@
 
 A client for the Sprintly API
 
+[![Build Status](https://secure.travis-ci.org/colinyoung/sprintly.png?branch=master)](https://travis-ci.org/colinyoung/sprintly)
+
 ## Installation
 
 Add this line to your application's Gemfile:
